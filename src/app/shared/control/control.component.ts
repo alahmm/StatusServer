@@ -6,7 +6,10 @@ import {Component, input, ViewEncapsulation} from '@angular/core';
   imports: [],
   templateUrl: './control.component.html',
   styleUrl: './control.component.css',
-  encapsulation: ViewEncapsulation.None//to activate the use of css design for inputs and textarea
+  encapsulation: ViewEncapsulation.None,//to activate the use of css design for inputs and textarea
+  host: {
+    class: 'control'
+  }
 })
 export class ControlComponent {
   label = input.required<string>();
